@@ -1,0 +1,6 @@
+- [ ] Consider reviewing some of the [[Related Works]]
+- [ ] Go over and run the existing files and model (vanilla.py)
+- [ ] Implement the model
+	- [ ] 7 drop rates $\times$ 2 models (learned and non-learned subsampling) = 14
+- [ ] Write report
+- [ ] Answer dry
