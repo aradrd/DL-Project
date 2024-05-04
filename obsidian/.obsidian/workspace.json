@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8402d748220e1eb7",
+        "id": "da1cfbb0de1d2820",
         "type": "tabs",
         "children": [
           {
-            "id": "a2c78605a7a0fe4e",
+            "id": "62ae7d78b4598ac9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tasks.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Tasks.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a2c78605a7a0fe4e",
+  "active": "62ae7d78b4598ac9",
   "lastOpenFiles": [
     "Tasks.md",
     "Related Works.md",
