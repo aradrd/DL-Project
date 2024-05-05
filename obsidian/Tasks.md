@@ -6,4 +6,3 @@
 - [ ] Implement the model
 	- [ ] 7 drop rates $\times$ 2 models (learned and non-learned subsampling) = 14
 - [ ] Write report
-- [ ] Answer dry

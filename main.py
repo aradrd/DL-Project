@@ -6,6 +6,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from models.vanilla import VanillaModel
 from utils.utils import create_data_loaders, freq_to_image
+from src.training import ReconstructionTrainer
 
 
 
@@ -13,20 +14,27 @@ from utils.utils import create_data_loaders, freq_to_image
 def main():
     args = create_arg_parser().parse_args() #get arguments from cmd/defaults
     train_loader, validation_loader, test_loader = create_data_loaders(args) #get dataloaders
-    
-    
+
+
     #freeze seeds for result reproducability
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
-    
+
     model = VanillaModel(args.drop_rate, args.device, args.learn_mask).to(args.device) #Example instatiation - replace with your model
-    
-    
-   
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr) #initialize optimizer
+    loss_fn = torch.nn.MSELoss() #initialize loss function
+    trainer = ReconstructionTrainer(model, optimizer, loss_fn, args.device) #initialize trainer
+    fit_res = trainer.fit(train_loader, test_loader, num_epochs=args.num_epochs, print_every=args.report_interval, verbose=False)
+
+
+
+
+
+
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    
+
     parser.add_argument('--seed', type=int, default=0, help='Random Seed for reproducability.')
     parser.add_argument('--data-path', type=str, default='/datasets/fastmri_knee/', help='path to MRI dataset.')
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu', help='Pass "cuda" to use gpu')
@@ -40,8 +48,8 @@ def create_arg_parser():
     parser.add_argument('--lr', type=float, default=0.01, help='Learn rate for your reconstruction model.')
     parser.add_argument('--mask-lr', type=float, default=0.01, help='Learn rate for your mask (ignored if the learn-mask flag is off).')
     parser.add_argument('--val-test-split', type=float, default=0.3, help='Portion of test set (NOT of the entire dataset, since train-test split is pre-defined) to be used for validation.')
-    
+
     return parser
-    
-if __name__ == "__main__":    
+
+if __name__ == "__main__":
     main()
