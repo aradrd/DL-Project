@@ -63,3 +63,14 @@ thots: if this is solvable when $W_1$ brings us to 1d, then this is always solva
 In general, we'd prefer to use a linear model when:
 1. The data is linearly separable.
 2. 
+
+# Q2
+The code is currently accumulating (`loss.backward()` computes and adds the gradient to the existing values) the gradients throughout different iterations of different samples. In the correct optimization process we've learned in class we've seen that we need to zero out the gradient between batches, since the previous batches' gradients may no longer point us in the optimal direction regarding the current weights and sample.
+Here's a fixed code snippet:
+```python
+for (x, y) in dataloader:
+	loss = loss_fn(model(x), y)
+	optimizer.zero_grad() # This line is new!
+	loss.backward()
+	optimizer.step()
+```

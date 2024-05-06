@@ -11,6 +11,19 @@
             "id": "6323107e15950a3e",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dry.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cd7d8435cb53f7b9",
+            "type": "leaf",
+            "state": {
               "type": "kanban",
               "state": {
                 "file": "Kanban.md"
@@ -84,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kanban.md",
+                "file": "dry.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kanban.md",
+                "file": "dry.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kanban.md"
+                "file": "dry.md"
               }
             }
           }
@@ -148,8 +161,8 @@
   "active": "6323107e15950a3e",
   "lastOpenFiles": [
     "Kanban.md",
-    "Tasks.md",
     "dry.md",
+    "Tasks.md",
     "Related Works.md",
     "MOC - MRI.md",
     "Related Works.md",
