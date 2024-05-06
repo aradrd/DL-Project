@@ -57,6 +57,7 @@ w_2 < 0
 \end{align*}
 $$
 Which is a contradiction. Therefore the maximum accuracy cannot be $100\%$, and as we mentioned above, the accuracy can be $75\%$, so the maximum accuracy is $75\%$.
+$$\tag*{$\blacksquare$}$$
 ## (c)
 thots: if this is solvable when $W_1$ brings us to 1d, then this is always solvable. Otherwise we need the answer from piazza to continue.
 ## (d)
@@ -74,3 +75,16 @@ for (x, y) in dataloader:
 	loss.backward()
 	optimizer.step()
 ```
+
+# Q3
+
+**(a)** In the context of CNNs, the term "Receptive Field" refers to the portion of the input that affects a specific node in the network. The term originates from the context of input images where, by using convolutions, many pixels in one layer affect few pixels in the following layer, and so on.
+
+**(b)**
+- A large receptive field is useful when attempting to understand the global context of the input as a whole. e.g. when the input is an image and the network's goal is to describe the image in plain words (describe the scene).
+- A small receptive field is useful when attempting to extract fine-grained features and more localized context. e.g. when trying to recognize smaller objects in a big image and not the scene as a whole (Where's Waldo?), where we want to prevent the influence of irrelevant context.
+
+**(c)**
+1. **Kernel Size:** Using a bigger kernel size allows for more pixels to affect each pixel in a subsequent layer.
+2. **Dilation:** Introducing gaps between kernel elements increases the receptive field without increasing the number of inputs to each node in the following layer.
+3. **Deepen the Network:** Using more convolution layers in the network allows the deeper layers to have larger receptive fields.

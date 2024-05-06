@@ -6,7 +6,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 from models.vanilla import VanillaModel
 from utils.utils import create_data_loaders, freq_to_image
-from src.training import ReconstructionTrainer
+from ext.training import ReconstructionTrainer
+from ext.plot import plot_fit
 
 
 
@@ -26,6 +27,8 @@ def main():
     loss_fn = torch.nn.MSELoss() #initialize loss function
     trainer = ReconstructionTrainer(model, optimizer, loss_fn, args.device) #initialize trainer
     fit_res = trainer.fit(train_loader, test_loader, num_epochs=args.num_epochs, print_every=args.report_interval, verbose=False)
+    plot_fit(fit_res)
+
 
 
 

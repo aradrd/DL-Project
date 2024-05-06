@@ -6,8 +6,6 @@ kanban-plugin: basic
 
 ## TODO
 
-- [ ] Question 2
-- [ ] Question 3
 - [ ] Question 4
 - [ ] Question 5
 - [ ] Question 6
@@ -39,6 +37,8 @@ kanban-plugin: basic
 ## Done
 
 **Complete**
+- [x] Question 2
+- [x] Question 3
 
 
 

@@ -9,7 +9,7 @@ from typing import Any, Tuple, Callable, Optional, cast
 from torch.optim import Optimizer
 from torch.utils.data import DataLoader
 
-from train_results import FitResult, BatchResult, EpochResult
+from .train_results import FitResult, BatchResult, EpochResult
 
 
 class Trainer(abc.ABC):
