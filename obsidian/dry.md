@@ -1,12 +1,12 @@
 # Q1
 ## (a)
-This classification model is not linear w.r.t. the input.
-Proof (in 1d):
-Let $x_1 = 1, x_2 = 2$ be arbitrary inputs, $b = 0$, $W = 1$, and $\tau = 3$. Then:
+The sigmoid ($\sigma=\frac{1}{1+e^{-x}}$) allows us to have non-linear decision boundaries. 
+This classification model is not linear w.r.t. the input, proof (in 1d):
+Let $x_1 = -1, x_2 = 1$ be arbitrary inputs, $b = 0$, $W = 1$, and $\tau = 1$. Then:
 $$
 \begin{align*}
-&f(u + v) = \sigma(W \cdot (x_1 + x_2) + b) = \sigma(3) = 1 \\
-&f(u) + f(v) = \sigma(Wx_1 + b) + \sigma(Wx_2 + b) = \sigma(1) + \sigma(2) = 0 + 0 = 0 \\
+&f(u + v) = \sigma(W \cdot (x_1 + x_2) + b) = \sigma(0) = 0.5 < \tau \implies \text{Negative} \\
+&f(u) + f(v) = \sigma(Wx_1 + b) + \sigma(Wx_2 + b) = \sigma(-1) + \sigma(1) = 1 \geq \tau \implies \text{Positive} \\
 &\Rightarrow f(u + v) \neq f(u) + f(v) \Rightarrow \text{Not linear} \tag*{$\blacksquare$}
 \end{align*}
 $$ 
@@ -41,12 +41,16 @@ y =
 \end{bmatrix}
  = \sigma(WX) &\implies
 \begin{cases}
-b + w_1 + w_2 > \tau \\
-b + w_1 - w_2 < \tau \\
-b - w_1 + w_2 < \tau \\
-b - w_1 - w_2 > \tau \\
+\sigma(b + w_1 + w_2) > \tau \\
+\sigma(b + w_1 - w_2) < \tau \\
+\sigma(b - w_1 + w_2) < \tau \\
+\sigma(b - w_1 - w_2) > \tau \\
 \end{cases} \\
 &\implies \begin{cases}
+\sigma(b + w_1 + w_2) > \sigma(b + w_1 - w_2) \\
+\sigma(b + w_1 - w_2) < \sigma(b - w_1 - w_2) \\
+\end{cases} \\
+&\underbrace{\implies}_{\sigma \text{ reversible}} \begin{cases}
 \cancel b + \cancel w_1 - w_2 <  \cancel b + \cancel w_1 + w_2 \\
 \cancel b - \cancel w_1 + w_2 <  \cancel b - \cancel w_1 - w_2
 \end{cases} \\
