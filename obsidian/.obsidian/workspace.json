@@ -8,22 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cd7d8435cb53f7b9",
-            "type": "leaf",
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "Kanban.md"
-              }
-            }
-          },
-          {
             "id": "43d81bb47ec268d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dry.md",
+                "file": "MOC - MRI.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a935f950e89414ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Schedule.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -81,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "12712ab8280e08cd",
@@ -98,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dry.md",
+                "file": "Schedule.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dry.md",
+                "file": "Schedule.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dry.md"
+                "file": "Schedule.md"
               }
             }
           }
@@ -156,16 +158,25 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "43d81bb47ec268d2",
+  "active": "a935f950e89414ed",
   "lastOpenFiles": [
-    "Kanban.md",
-    "dry.md",
-    "Tasks.md",
-    "Related Works.md",
     "MOC - MRI.md",
+    "Schedule.md",
+    "Generative Models.md",
+    "Thots and Players.md",
+    "attachments/Generative Models.jpg",
+    "Tasks.md",
+    "Untitled.md",
+    "Kanban.md",
+    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
+    "Untitled 1.md",
+    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
+    "Untitled.canvas",
+    "dry.md",
     "Related Works.md",
     "Compressed Sensing.md",
     "Frequency Domain.md",

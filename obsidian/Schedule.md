@@ -1,0 +1,11 @@
+- Week 1 - GlaDOS
+	- [ ] Model Architecture
+	- [ ] Literature
+	- [ ] Tutorial?
+	- [ ] Vanilla
+- Week 2 - Wheatley
+	- [ ] Initial results (not good, just something)
+	- [ ] Working Model (maybe 2?)
+- Week 3 - Chell
+	- [ ] Multiple models working
+	- [ ] Optimized results

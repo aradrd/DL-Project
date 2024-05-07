@@ -3,3 +3,6 @@
 [[Compressed Sensing]]
 [[Related Works]]
 [[Tasks]]
+[[Thots and Players]]
+[[Generative Models]]
+[[Schedule]]

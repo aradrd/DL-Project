@@ -17,11 +17,11 @@ kanban-plugin: basic
 - [ ] Question 12
 - [ ] Consider reviewing some of the [[Related Works]]
 - [ ] Conduct a mini literature review to see what's what
-- [ ] Try a naïve approach with [[Linear Regression]]
 - [ ] Data exploration
 - [ ] Implement the model
 - [ ] 7 drop rates $\times$ 2 models (learned and non-learned subsampling) = 14
 - [ ] Write report
+- [ ] Watch Lecture 12
 
 
 ## In Progress
@@ -32,6 +32,7 @@ kanban-plugin: basic
 ## Stuck
 
 - [ ] Question 1
+- [ ] Try a naïve approach with [[Linear Regression]]
 
 
 ## Done
