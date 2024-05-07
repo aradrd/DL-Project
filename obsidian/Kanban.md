@@ -15,18 +15,19 @@ kanban-plugin: basic
 - [ ] Question 10
 - [ ] Question 11
 - [ ] Question 12
-- [ ] Consider reviewing some of the [[Related Works]]
-- [ ] Conduct a mini literature review to see what's what
 - [ ] Data exploration
 - [ ] Implement the model
 - [ ] 7 drop rates $\times$ 2 models (learned and non-learned subsampling) = 14
 - [ ] Write report
-- [ ] Watch Lecture 12
+- [ ] Watch Tutorial 12
+- [ ] Learn more about MRI machine results (k-space, trajectory, frequency and space domains)
 
 
 ## In Progress
 
 - [ ] Go over and run the existing files and model (vanilla.py)
+- [ ] Conduct a mini literature review to see what's what
+- [ ] Consider reviewing some of the [[Related Works]]
 
 
 ## Stuck
@@ -40,6 +41,7 @@ kanban-plugin: basic
 **Complete**
 - [x] Question 2
 - [x] Question 3
+- [x] Watch Lecture 12
 
 
 
