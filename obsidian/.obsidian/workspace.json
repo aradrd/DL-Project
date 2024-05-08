@@ -8,7 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5b2a3486120f6185",
+            "id": "4a5de3a64b89cf74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Compressed Sensing.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8230ce10ec4c7e37",
             "type": "leaf",
             "state": {
               "type": "kanban",
@@ -16,21 +29,9 @@
                 "file": "Kanban.md"
               }
             }
-          },
-          {
-            "id": "4a5de3a64b89cf74",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Frequency Domain.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -80,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 218.5086555480957
   },
   "right": {
     "id": "12712ab8280e08cd",
@@ -159,24 +159,28 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "5b2a3486120f6185",
+  "active": "8230ce10ec4c7e37",
   "lastOpenFiles": [
+    "MOC - MRI.md",
+    "fastMRI.md",
+    "Multi-Coil.md",
+    "Compressed Sensing.md",
     "Thots and Players.md",
-    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
+    "Generative Models.md",
     "Frequency Domain.md",
     "Related Works.md",
+    "attachments/Frequency Domain.png",
+    "Kanban.md",
+    "Untitled Kanban.md",
+    "dry.md",
+    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
     "Schedule.md",
     "Tasks.md",
     "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
-    "dry.md",
     "Untitled.md",
-    "MOC - MRI.md",
-    "Generative Models.md",
     "attachments/Generative Models.jpg",
-    "Kanban.md",
     "Untitled 1.md",
     "Untitled.canvas",
-    "Compressed Sensing.md",
     "Image Domain.md",
     "attachments/Compressed Sensing-1.png",
     "attachments/Compressed Sensing.png",

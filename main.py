@@ -25,8 +25,8 @@ def main():
     model = VanillaModel(args.drop_rate, args.device, args.learn_mask).to(args.device) #Example instatiation - replace with your model
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr) #initialize optimizer
     loss_fn = torch.nn.MSELoss() #initialize loss function
-    trainer = ReconstructionTrainer(model, optimizer, loss_fn, args.device) #initialize trainer
-    fit_res = trainer.fit(train_loader, test_loader, num_epochs=args.num_epochs, print_every=args.report_interval, verbose=False)
+    trainer = ReconstructionTrainer(model, loss_fn, optimizer, args.device) #initialize trainer
+    fit_res = trainer.fit(train_loader, test_loader, num_epochs=args.num_epochs, print_every=args.report_interval, verbose=True)
     plot_fit(fit_res)
 
 

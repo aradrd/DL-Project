@@ -12,3 +12,5 @@ $$m_\theta\left(\mathcal M(\tilde x)\right) \approx x$$
 ## Levels of subsampling
 - Random subsampling mask $\mathcal M$.
 - Parametric subsampling mask $\mathcal M _ \psi$.
+## Datasets
+[[fastMRI]]

@@ -106,3 +106,13 @@ for (x, y) in dataloader:
 1. **Kernel Size:** Using a bigger kernel size allows for more pixels to affect each pixel in a subsequent layer.
 2. **Dilation:** Introducing gaps between kernel elements increases the receptive field without increasing the number of inputs to each node in the following layer.
 3. **Deepen the Network:** Using more convolution layers in the network allows the deeper layers to have larger receptive fields.
+# Q4
+**(a)** There's several problems with the approach our friend has chosen.
+Firstly, computing the loss based on the discrete classification values seems to be a bad choice, since there's no way for the optimizer to incrementally improve (it only knows whether it was right or wrong). Worse yet, it seems to imply that there's something better about classifying e.g. a horse as a dog rather than classifying a horse as a cat. This is because MSE penalizes distances, but there's no meaning to the "distance" between the different classifications.
+
+**(b)** L1 loss ignores 2 main properties of the segmentation task. The first being the same as in (a), measuring the absolute error between different labels makes no sense in the context of classification. The second being the spatial relationship between pixels; i.e. neighboring pixels often belong to the same class. Due to these reasons: penalizing all mistakes equally might not be suitable in this case (if we had prior information about the underlying data distribution it should've also been taken into account when penalizing errors).
+
+**(c)** We'd suggest 2 changes to her method:
+1. Use a feature map per class, meaning each pixel will have a probability for each classification, this will help solve the problem we mentioned in (a).
+2. Based on these probabilities, use the Cross Entropy Loss function, which will help the model optimize and fit the underlying data distribution by penalizing pixels which were given a low probability for the ground truth label (and vice versa).
+	- It's worth mentioning that there are other loss functions which take the spatial aspect into account. Some of them are modifications of the CE Loss function. For example, the Focal Loss, which takes into account the relationship between foreground and background.

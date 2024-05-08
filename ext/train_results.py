@@ -8,6 +8,7 @@ class BatchResult(NamedTuple):
     """
 
     loss: float
+    num_correct: int = 0
 
 
 class EpochResult(NamedTuple):
