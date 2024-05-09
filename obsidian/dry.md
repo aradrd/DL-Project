@@ -21,8 +21,8 @@ $$
 \end{bmatrix}
 , \mathbf W = 
 \begin{bmatrix}
-b \\
-w_1 \\
+b &
+w_1 &
 w_2
 \end{bmatrix}
 \end{align*}
@@ -61,7 +61,7 @@ w_2 < 0
 $$
 $$\tag*{$\blacksquare$}$$
 Which is a contradiction. Therefore the maximum accuracy cannot be $100\%$.
-Let $W = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \tau = \sigma(0)$:
+Let $W = \begin{bmatrix} 0 & 1 & 1 \end{bmatrix}, \tau = \sigma(0)$:
 $$
 y = \sigma(WX) =
 \begin{bmatrix}
@@ -79,8 +79,40 @@ y = \sigma(WX) =
 $$
 This yields $75\%$ accuracy, which as we've shown is the maximum achievable accuracy.
 
-**(c)** thots: if this is solvable when $W_1$ brings us to 1d, then this is always solvable. Otherwise we need the answer from piazza to continue.
-
+**(c)** Yes, we can now achieve $100\%$ accuracy.
+Let:
+$$
+\begin{align*}
+&W_1 = \begin{bmatrix}
+-0.99 & -1.3 \\
+-0.94 & -1.0
+\end{bmatrix}, W_2 = \begin{bmatrix}
+-3.5 & 3.5
+\end{bmatrix} \\
+&b_1 = \begin{bmatrix}
+2.4 & -3.2
+\end{bmatrix}, b_2 = 2.7 \\
+&\tau = 0
+\end{align*}
+$$
+And so:
+$$
+\begin{align*}
+y &= W_2 \sigma \left(W_1X^\top + b_1\right) + b_2 \\
+&= \begin{bmatrix}
+0.87 \\
+-0.43 \\
+-0.28 \\
+0.005
+\end{bmatrix}
+\implies \begin{cases}
+(1, 1) &\to \textcolor{blue}{\text{Positive}} \\
+(1, -1) &\to \textcolor{red}{\text{Negative}} \\
+(-1, 1) &\to \textcolor{red}{\text{Negative}} \\
+(-1, -1) &\to \textcolor{blue}{\text{Positive}}
+\end{cases}
+\end{align*}
+$$
 **(d)** In general, we'd prefer to use a linear model when:
 1. The data is (at least somewhat) linearly separable, consisting of distinct groups with a low amount of noise. In this case a linear decision boundary can fit the data well and achieve good results on both seen and unseen data.
 2. In a case where the relation between the groups in a dataset is complex or undeterminable due to the dataset's small size, we might prefer a linear model due to its simplicity; more robust complex models might overfit the data or include strong assumptions on its distribution and fail to generalize. In this case a non-linear transformation can be used with a linear model (linear decision boundary) to improve the model's accuracy.

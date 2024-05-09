@@ -17,15 +17,11 @@ kanban-plugin: basic
 - [ ] Implement the model
 - [ ] 7 drop rates $\times$ 2 models (learned and non-learned subsampling) = 14
 - [ ] Write report
-- [ ] Watch Tutorial 12
-- [ ] Learn more about MRI machine results (k-space, trajectory, frequency and space domains)
 
 
 ## In Progress
 
-- [ ] Try a naïve approach with [[Linear Regression]]
-- [ ] Question 1
-- [ ] Go over and run the existing files and model (vanilla.py)
+- [ ] Watch Tutorial 12
 - [ ] Conduct a mini literature review to see what's what
 - [ ] Consider reviewing some of the [[Related Works]]
 
@@ -38,8 +34,11 @@ kanban-plugin: basic
 
 **Complete**
 - [x] Question 2
+- [x] Go over and run the existing files and model (vanilla.py)
+- [x] Learn more about MRI machine results (k-space, trajectory, frequency and space domains)
 - [x] Question 3
 - [x] Watch Lecture 12
+- [x] Question 1
 - [x] Question 4
 - [x] Data exploration
 

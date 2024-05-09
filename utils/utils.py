@@ -2,6 +2,8 @@ from data.mri_dataset import SliceData
 from torch.utils.data import DataLoader
 from data.mri_dataset import DataTransform
 from data import transforms
+from matplotlib.pyplot import figure, imshow, subplot, title, tight_layout
+from torch import no_grad
 
 
     
@@ -65,3 +67,21 @@ def freq_to_image(freq_data):
     '''
     return transforms.complex_abs(transforms.ifft2_regular(freq_data))
 
+def plot_results(model, x, y):
+    with no_grad():
+        subsampled = model.subsample(x)
+        reconstructed = model.reconstruct(subsampled).cpu()
+        fig = figure()
+        subplot(1, 4, 1)
+        title('Ground Truth')
+        imshow(y)
+        subplot(1, 4, 2)
+        title('Fully Sampled')
+        imshow(freq_to_image(x))
+        subplot(1, 4, 3)
+        title('Our Reconstruction')
+        imshow(reconstructed[0][0])
+        subplot(1, 4, 4)
+        title('Subsampled')
+        imshow(subsampled[0][0])
+        tight_layout()

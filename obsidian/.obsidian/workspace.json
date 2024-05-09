@@ -11,12 +11,9 @@
             "id": "4a5de3a64b89cf74",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Compressed Sensing.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Kanban.md"
               }
             }
           },
@@ -24,9 +21,9 @@
             "id": "8230ce10ec4c7e37",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "pdf-annotator",
               "state": {
-                "file": "Kanban.md"
+                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md"
               }
             }
           }
@@ -81,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5086555480957
+    "width": 218.5086555480957,
+    "collapsed": true
   },
   "right": {
     "id": "12712ab8280e08cd",
@@ -97,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kanban.md",
+                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kanban.md",
+                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kanban.md"
+                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md"
               }
             }
           }
@@ -161,22 +159,22 @@
   },
   "active": "8230ce10ec4c7e37",
   "lastOpenFiles": [
+    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
+    "Kanban.md",
+    "Compressed Sensing.md",
+    "dry.md",
     "MOC - MRI.md",
     "fastMRI.md",
     "Multi-Coil.md",
-    "Compressed Sensing.md",
     "Thots and Players.md",
     "Generative Models.md",
     "Frequency Domain.md",
     "Related Works.md",
     "attachments/Frequency Domain.png",
-    "Kanban.md",
     "Untitled Kanban.md",
-    "dry.md",
     "PILOT  Physics-Informed Learned Optimized Trajectories.md",
     "Schedule.md",
     "Tasks.md",
-    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
     "Untitled.md",
     "attachments/Generative Models.jpg",
     "Untitled 1.md",
