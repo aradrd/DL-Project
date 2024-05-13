@@ -17,11 +17,11 @@ kanban-plugin: basic
 - [ ] Implement the model
 - [ ] 7 drop rates $\times$ 2 models (learned and non-learned subsampling) = 14
 - [ ] Write report
+- [ ] naive unet
 
 
 ## In Progress
 
-- [ ] Watch Tutorial 12
 - [ ] Conduct a mini literature review to see what's what
 - [ ] Consider reviewing some of the [[Related Works]]
 
@@ -35,6 +35,7 @@ kanban-plugin: basic
 **Complete**
 - [x] Question 2
 - [x] Go over and run the existing files and model (vanilla.py)
+- [x] Watch Tutorial 12
 - [x] Learn more about MRI machine results (k-space, trajectory, frequency and space domains)
 - [x] Question 3
 - [x] Watch Lecture 12

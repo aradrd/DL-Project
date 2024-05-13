@@ -2,6 +2,9 @@ Using generative models our noising process will be the subsampling (whose mask 
 Models that we've seen in the course and might be effective for our task:
 - CNN (vanilla)
 - VAE
+- Naive Unet
+	- Kinda working
+	- Needs to downsample (either learned or static) because images seem to be too big (taking up too much vram). If we do this, we need to remember to upsample.
 - Diffusion
 	- UNet architecture seems to be the way to go (for any task?), there are many versions and optimizations we should look into.
 We can gather more models from:

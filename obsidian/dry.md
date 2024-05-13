@@ -148,3 +148,44 @@ Firstly, computing the loss based on the discrete classification values seems to
 1. Use a feature map per class, meaning each pixel will have a probability for each classification, this will help solve the problem we mentioned in (a).
 2. Based on these probabilities, use the Cross Entropy Loss function, which will help the model optimize and fit the underlying data distribution by penalizing pixels which were given a low probability for the ground truth label (and vice versa).
 	- It's worth mentioning that there are other loss functions which take the spatial aspect into account. Some of them are modifications of the CE Loss function. For example, the Focal Loss, which takes into account the relationship between foreground and background.
+# Q5
+**(a)**
+- **Vanishing Gradients** - This term refers to the phenomena where the gradients calculated using backpropagation on a neural network become increasingly small, obscuring the actual gradient step that needs to be taken. This is a result of the multiplication of small gradient values that arise from the chain rule, in combination with deep networks (the deeper the network, the more likely the problem is to occur) and the tendency of some activation functions to become relatively flat for large and small inputs.
+- **Exploding Gradients** - This term refers to the phenomena where the gradients calculated using backpropagation on a neural network become increasingly large, causing the weights to change drastically between iterations of the training process and possibly circling a minima and never converging. Similarly to Vanishing Gradients, this is a result of the multiplication used in applying the chain rule while backpropagating. This can happen due to a number of reasons, namely: unfortunate weight initialization, activation function gradients, and network depth.
+**(b)** 
+###### Vanishing Gradients
+Let's consider the following model:
+$$
+\hat y = \sigma_2(W_2\sigma_1(W_1x))
+$$
+Let $\mathcal L = L_2$, $W_1 = W_2 = x = 3$, and $y = 0$.
+in the univariate case.
+$$
+\begin{align*}
+\mathcal L &= \hat y ^ 2 \approx 0.9\\
+\frac {\partial \mathcal L} {\partial W_1} &= \frac {\partial \mathcal L} {\partial \sigma_2} \cdot \frac {\partial \sigma _2 } {\partial \sigma _1} \cdot \frac {\partial \sigma _1}{\partial W_1} \\
+&= 2\hat y \cdot \sigma_2\left(W_2\sigma_1\right)\cdot (1 - \sigma_2(W_2 \sigma_1)) \cdot W_2 \cdot \sigma_1\left(W_1x\right)\cdot (1-\sigma_1(W_1x))\cdot x \\
+&\approx 9.5 \cdot 10^{-5}
+\end{align*}
+$$
+As we can see, the gradient has vanished.
+###### Exploding Gradients
+Let's consider the following model:
+$$
+\hat y = \text{ReLU}_2(W_2\text{ReLU}_1(W_1x))
+$$
+Let $\mathcal L = L_2$, $W_1 = W_2 = 90$, $x = 1$, and $y = 0$.
+in the univariate case.
+$$
+\begin{align*}
+\mathcal L &= \hat y ^ 2 \approx 6.56 \cdot 10^7\\
+\frac {\partial \mathcal L} {\partial W_1} &= \frac {\partial \mathcal L} {\partial \text{ReLU}_2} \cdot \frac {\partial \text{ReLU} _2 } {\partial \text{ReLU} _1} \cdot \frac {\partial \text{ReLU} _1}{\partial W_1} \\
+&= 2\hat y \cdot \text{ReLU}_2\left(W_2\text{ReLU}_1\right)\cdot (1 - \text{ReLU}_2(W_2 \text{ReLU}_1)) \\ &\cdot W_2 \cdot \text{ReLU}_1\left(W_1x\right)\cdot (1-\text{ReLU}_1(W_1x))\cdot x \\
+&\approx 1.45 \cdot 10^6
+\end{align*}
+$$
+As we can see, the gradient has exploded.
+**(c)**
+- **MLP** - To avoid vanishing gradients, use a non-squashing activation function. Meaning one that doesn't have any horizontal asymptotes. As we explained in **(a)**, vanishing gradients occur as a result of activation function gradients that are close to 0, we can eliminate this problem by introducing activation functions with gradients that don't zero-out as easily.
+- **CNN** - To reduce the possibility of exploding gradients, use batch normalization. This will help keep the gradients in check.
+- **RNN** - 

@@ -11,9 +11,12 @@
             "id": "4a5de3a64b89cf74",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Kanban.md"
+                "file": "dry.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           },
@@ -27,8 +30,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md",
+                "file": "dry.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md",
+                "file": "dry.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md"
+                "file": "dry.md"
               }
             }
           }
@@ -157,22 +159,22 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "8230ce10ec4c7e37",
+  "active": "4a5de3a64b89cf74",
   "lastOpenFiles": [
-    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
     "Kanban.md",
+    "Thots and Players.md",
+    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
+    "fastMRI.md",
+    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
     "Compressed Sensing.md",
     "dry.md",
     "MOC - MRI.md",
-    "fastMRI.md",
     "Multi-Coil.md",
-    "Thots and Players.md",
     "Generative Models.md",
     "Frequency Domain.md",
     "Related Works.md",
     "attachments/Frequency Domain.png",
     "Untitled Kanban.md",
-    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
     "Schedule.md",
     "Tasks.md",
     "Untitled.md",
