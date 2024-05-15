@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## TODO
 
-- [ ] Question 5
 - [ ] Question 6
 - [ ] Question 7
 - [ ] Question 8
@@ -22,6 +21,7 @@ kanban-plugin: basic
 
 ## In Progress
 
+- [ ] Question 5
 - [ ] Conduct a mini literature review to see what's what
 - [ ] Consider reviewing some of the [[Related Works]]
 

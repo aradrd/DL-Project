@@ -4,11 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "311d79de3a317606",
+        "id": "6936c982a14d7728",
         "type": "tabs",
         "children": [
           {
-            "id": "4a5de3a64b89cf74",
+            "id": "f246a0624189874f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Compressed Sensing.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3165b1cb31ba4de3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,18 +32,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "8230ce10ec4c7e37",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md"
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -80,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5086555480957,
-    "collapsed": true
+    "width": 218.5086555480957
   },
   "right": {
     "id": "12712ab8280e08cd",
@@ -159,24 +162,24 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "4a5de3a64b89cf74",
+  "active": "3165b1cb31ba4de3",
   "lastOpenFiles": [
-    "Kanban.md",
-    "Thots and Players.md",
-    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
-    "fastMRI.md",
-    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
     "Compressed Sensing.md",
     "dry.md",
+    "Kanban.md",
     "MOC - MRI.md",
+    "fastMRI.md",
     "Multi-Coil.md",
+    "Thots and Players.md",
     "Generative Models.md",
     "Frequency Domain.md",
     "Related Works.md",
     "attachments/Frequency Domain.png",
     "Untitled Kanban.md",
+    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
     "Schedule.md",
     "Tasks.md",
+    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
     "Untitled.md",
     "attachments/Generative Models.jpg",
     "Untitled 1.md",
