@@ -68,22 +68,23 @@ def freq_to_image(freq_data):
     return transforms.complex_abs(transforms.ifft2_regular(freq_data))
 
 def plot_results(model, x, y, device="cpu"):
-    x.to(device)
-    y.to(device)
+    x = x.to(device)
+    model = model.to(device)
+    
     with no_grad():
         subsampled = model.subsample(x)
         reconstructed = model.reconstruct(subsampled).cpu()
         fig = figure()
         subplot(1, 4, 1)
         title('Ground Truth')
-        imshow(y)
+        imshow(y.cpu())
         subplot(1, 4, 2)
         title('Fully Sampled')
-        imshow(freq_to_image(x))
+        imshow(freq_to_image(x).cpu())
         subplot(1, 4, 3)
         title('Our Reconstruction')
         imshow(reconstructed[0][0])
         subplot(1, 4, 4)
         title('Subsampled')
-        imshow(subsampled[0][0])
+        imshow(subsampled[0][0].cpu())
         tight_layout()
