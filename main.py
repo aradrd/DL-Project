@@ -5,10 +5,24 @@ import torch
 import numpy as np
 from matplotlib import pyplot as plt
 from models.vanilla import VanillaModel
+from models.unet_rec import UNet_Rec
 from utils.utils import create_data_loaders, freq_to_image
 from ext.training import ReconstructionTrainer
 from ext.plot import plot_fit
 
+str_to_model = {
+    'vanilla': VanillaModel,
+    'unet_rec': UNet_Rec
+}
+
+str_to_optimizer = {
+    'adam': torch.optim.Adam,
+    'sgd': torch.optim.SGD
+}
+
+str_to_loss = {
+    'mse': torch.nn.MSELoss,
+}
 
 
 
@@ -22,12 +36,13 @@ def main():
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
 
-    model = VanillaModel(args.drop_rate, args.device, args.learn_mask).to(args.device) #Example instatiation - replace with your model
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr) #initialize optimizer
-    loss_fn = torch.nn.MSELoss() #initialize loss function
-    trainer = ReconstructionTrainer(model, loss_fn, optimizer, args.device) #initialize trainer
+    model = str_to_model[args.model](args.drop_rate, args.device, args.learn_mask).to(args.device) #Example instatiation - replace with your model
+    optimizer = str_to_optimizer[args.optimizer](model.parameters(), lr=args.lr) #initialize optimizer
+    loss_fn = str_to_loss[args.loss]()
+    trainer = ReconstructionTrainer(model, loss_fn, optimizer, args.device)
     fit_res = trainer.fit(train_loader, test_loader, num_epochs=args.num_epochs, print_every=args.report_interval, verbose=True)
     plot_fit(fit_res)
+    print("ima shcha zona")
 
 
 
@@ -51,6 +66,9 @@ def create_arg_parser():
     parser.add_argument('--lr', type=float, default=0.01, help='Learn rate for your reconstruction model.')
     parser.add_argument('--mask-lr', type=float, default=0.01, help='Learn rate for your mask (ignored if the learn-mask flag is off).')
     parser.add_argument('--val-test-split', type=float, default=0.3, help='Portion of test set (NOT of the entire dataset, since train-test split is pre-defined) to be used for validation.')
+    parser.add_argument('--optimizer', type=str, default='adam', help='Optimizer to use for training.')
+    parser.add_argument('--loss', type=str, default='mse', help='Loss function to use for training.')
+    parser.add_argument('--model', type=str, default='unet_rec', help='Model to use for training.')
 
     return parser
 

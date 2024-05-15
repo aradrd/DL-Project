@@ -68,6 +68,8 @@ def freq_to_image(freq_data):
     return transforms.complex_abs(transforms.ifft2_regular(freq_data))
 
 def plot_results(model, x, y):
+    x.to(model.device)
+    y.to(model.device)
     with no_grad():
         subsampled = model.subsample(x)
         reconstructed = model.reconstruct(subsampled).cpu()
