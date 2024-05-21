@@ -4,24 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6936c982a14d7728",
+        "id": "311d79de3a317606",
         "type": "tabs",
         "children": [
           {
-            "id": "f246a0624189874f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Compressed Sensing.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3165b1cb31ba4de3",
+            "id": "4a5de3a64b89cf74",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,9 +19,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8230ce10ec4c7e37",
+            "type": "leaf",
+            "state": {
+              "type": "pdf-annotator",
+              "state": {
+                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md"
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -162,24 +158,24 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "3165b1cb31ba4de3",
+  "active": "4a5de3a64b89cf74",
   "lastOpenFiles": [
-    "Compressed Sensing.md",
-    "dry.md",
     "Kanban.md",
-    "MOC - MRI.md",
-    "fastMRI.md",
-    "Multi-Coil.md",
     "Thots and Players.md",
+    "fastMRI.md",
+    "dry.md",
+    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
+    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
+    "Compressed Sensing.md",
+    "MOC - MRI.md",
+    "Multi-Coil.md",
     "Generative Models.md",
     "Frequency Domain.md",
     "Related Works.md",
     "attachments/Frequency Domain.png",
     "Untitled Kanban.md",
-    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
     "Schedule.md",
     "Tasks.md",
-    "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
     "Untitled.md",
     "attachments/Generative Models.jpg",
     "Untitled 1.md",

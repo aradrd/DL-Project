@@ -190,4 +190,43 @@ As we can see, the gradient has exploded.
 - **CNN** - To reduce the possibility of exploding gradients, use batch normalization. This was shown to have 2 effects: The first is smoothing the landscape of the non-convex loss function, and the second is keeping the values of the weights close to zero, hence keeping them away from large and small values which are known to cause vanishing gradients. 
 - **RNN** - To avoid exploding and vanishing gradients, another method is gradient clipping. A minimum and a maximum value are set for the gradient, and whenever gradient values exceed them, we set the gradients to the minimum / maximum values accordingly. [TODO: Consider replacing with this, which actually addresses the problem in RNNS](https://stats.stackexchange.com/questions/185639/how-does-lstm-prevent-the-vanishing-gradient-problem)
 # Q6
-In the snippet we are using a convolution with a kernel size of $32$ from 
+Bitch
+
+# Q9
+Let
+$$
+X = \begin{bmatrix}
+0.3 & 0.75 & 0.6 & 0.05 \\
+0.25 & 0.1 & 0.2 & 0.4 \\
+0.45 & 0.15 & 0.2 & 0.55
+\end{bmatrix}
+$$
+Then
+$$
+\begin{align*}
+&Q = W_Q \times X = \begin{bmatrix}
+0..5 & 0.2 & 0.24 & 0.46 \\
+0.13 & 0.31 & 0.25 & 0.04 \\
+0.4 & 0.15 & 0.24 & 0.56
+\end{bmatrix}
+&&K = W_K \times X = \begin{bmatrix}
+0.44 & 0.15 & 0.21 & 0.56 \\
+0.67 & 0.75 & 0.7 & 0.59 \\
+0.18 & 0.23 & 0.23 & 0.17
+\end{bmatrix} \\
+&V = W_V \times X = \begin{bmatrix}
+0.29 & 0.56 & 0.47 & 0.15 \\
+0.21 & 0.07 & 0.1 & 0.26 \\
+0.54 & 0.31 & 0.35 & 0.61
+\end{bmatrix}
+\end{align*}
+$$
+Thus
+$$
+A = \text{softmax}\left(\frac {Q K^\top} {\sqrt {d_k}}\right)V = 
+\begin{bmatrix}
+0.33 & 0.30 & 0.29 & 0.32 \\
+0.34 & 0.30 & 0.29 & 0.33 \\
+0.33 & 0.30 & 0.29 & 0.32 \\
+\end{bmatrix}
+$$
