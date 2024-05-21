@@ -1,0 +1,5 @@
+{
+    "model": "vanilla",
+    "drop_rate": 0.42,
+    "num_epochs": 1
+}

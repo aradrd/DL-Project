@@ -5,6 +5,18 @@ from data import transforms
 from matplotlib.pyplot import figure, imshow, subplot, title, tight_layout
 from torch import no_grad
 
+class Namespace:
+    STR_FORMAT = "{:<16} {:<32}\n"
+
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+    
+    def __repr__(self):
+        res = self.STR_FORMAT.format('Key','Value')
+        for k, v in self.__dict__.items():
+            res += self.STR_FORMAT.format(k, str(v))
+
+        return res
 
     
 def create_datasets(args,resolution=320):
