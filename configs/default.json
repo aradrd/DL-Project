@@ -17,23 +17,32 @@
     },
     "batch-size": {
         "default": 16,
-        "help": "Batch size for training."
+        "help": "Batch size for training.",
+        "type": "int"
     },
     "num-workers": {
         "default": 1,
-        "help": "Number of threads used for data handling."
+        "help": "Number of threads used for data handling.",
+        "type": "int"
+
     },
     "num-epochs": {
         "default": 50,
-        "help": "Number of training epochs."
+        "help": "Number of training epochs.",
+        "type": "int"
+
     },
     "report-interval": {
         "default": 10,
-        "help": "Report training stats once per this many iterations."
+        "help": "Report training stats once per this many iterations.",
+        "type": "int"
+
     },
     "drop-rate": {
         "default": 0.8,
-        "help": "Percentage of data to drop from each image (dropped in freq domain)."
+        "help": "Percentage of data to drop from each image (dropped in freq domain).",
+        "type": "float"
+
     },
     "learn-mask": {
         "default": false,
@@ -45,15 +54,18 @@
     },
     "lr": {
         "default": 0.01,
-        "help": "Learning rate for your reconstruction model."
+        "help": "Learning rate for your reconstruction model.",
+        "type": "float"
     },
     "mask-lr": {
         "default": 0.01,
-        "help": "Learning rate for your mask (ignored if the learn-mask flag is off)."
+        "help": "Learning rate for your mask (ignored if the learn-mask flag is off).",
+        "type": "float"
     },
     "val-test-split": {
         "default": 0.3,
-        "help": "Portion of test set (NOT of the entire dataset, since train-test split is pre-defined) to be used for validation."
+        "help": "Portion of test set (NOT of the entire dataset, since train-test split is pre-defined) to be used for validation.",
+        "type": "float"
     },
     "optimizer": {
         "default": "adam",

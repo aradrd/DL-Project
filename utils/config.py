@@ -6,6 +6,13 @@ from typing import List
 
 DEFAULT_CONFIG = Path(__file__).parent / '../configs/default.json'
 
+str_to_type = {
+    "int": int,
+    "float": float,
+    "str": str,
+    "bool": bool,
+}
+
 def create_arg_parser(config=DEFAULT_CONFIG):
     parser = ArgumentParser()
     args_dict = {}
@@ -16,7 +23,10 @@ def create_arg_parser(config=DEFAULT_CONFIG):
         def_val = value["default"]
         help_str = value["help"]
         action = value.get("action", "store")
-        parser.add_argument(f'--{arg}', default=def_val, help=help_str, action=action)
+        arg_type = value.get("type", None)
+        arg_type = str_to_type[arg_type] if arg_type is not None else None
+        parser.add_argument(f'--{arg}', default=def_val, help=help_str, action=action, type=arg_type)
+
     parser.set_defaults(device="cuda" if cuda_available() else "cpu")
 
     return parser

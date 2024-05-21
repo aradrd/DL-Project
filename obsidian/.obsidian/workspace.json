@@ -16,14 +16,23 @@
                 "file": "Kanban.md"
               }
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "556b974cefa1bc65",
+        "type": "tabs",
+        "children": [
           {
-            "id": "8230ce10ec4c7e37",
+            "id": "27edc9ab901d9b5a",
             "type": "leaf",
             "state": {
-              "type": "pdf-annotator",
+              "type": "markdown",
               "state": {
-                "file": "PILOT  Physics-Informed Learned Optimized Trajectories.md"
+                "file": "loss value fiasco.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -93,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kanban.md",
+                "file": "loss value fiasco.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kanban.md",
+                "file": "loss value fiasco.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kanban.md"
+                "file": "loss value fiasco.md"
               }
             }
           }
@@ -155,13 +164,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "4a5de3a64b89cf74",
+  "active": "27edc9ab901d9b5a",
   "lastOpenFiles": [
-    "dry.md",
     "Kanban.md",
+    "loss value fiasco.md",
+    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
+    "dry.md",
     "Thots and Players.md",
     "fastMRI.md",
-    "PILOT  Physics-Informed Learned Optimized Trajectories.md",
     "attachments/PILOT  Physics-Informed Learned Optimized Trajectories.pdf",
     "Compressed Sensing.md",
     "MOC - MRI.md",

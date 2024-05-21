@@ -33,5 +33,6 @@ class ModelRunner:
     def fit(self):
         curr_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(f"[{curr_time}]\tRunning with:\n{self.args}")
-        fit_res = self.trainer.fit(self.train_loader, self.test_loader, num_epochs=self.args.num_epochs, print_every=self.args.report_interval, verbose=True)
+        # fit_res = self.trainer.fit(self.train_loader, self.test_loader, num_epochs=self.args.num_epochs, print_every=self.args.report_interval, verbose=True)
+        fit_res = self.trainer.fit(self.test_loader, self.test_loader, num_epochs=self.args.num_epochs, print_every=self.args.report_interval, verbose=True)
         return fit_res

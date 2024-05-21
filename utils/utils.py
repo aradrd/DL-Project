@@ -48,6 +48,7 @@ def create_data_loaders(args):
     '''Create train, validation and test datasets, and then out of them create the dataloaders. 
        These loaders will automatically apply needed transforms, as dictated in the create_datasets function using the transform parameter.'''
     train_data, dev_data, test_data = create_datasets(args)
+    # slice datasets to size 10 for testing
     
     train_loader = DataLoader(
         dataset=train_data,

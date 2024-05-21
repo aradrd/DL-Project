@@ -27,7 +27,7 @@ class SliceData(Dataset):
             #Note val-test split is not randomized here for comparison across submissions. In real-world it should be.
             num_files = int(len(files) * split)
             files = (files[:num_files] if validation else files[num_files:]) 
-        for fname in sorted(files):
+        for fname in sorted(files)[:4]:
             if ".cache" in str(fname):
                 continue
             with h5py.File(fname, 'r') as data:

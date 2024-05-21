@@ -14,16 +14,18 @@ kanban-plugin: basic
 - [ ] Implement the model
 - [ ] 7 drop rates $\times$ 2 models (learned and non-learned subsampling) = 14
 - [ ] Write report
-- [ ] Fix Unet training
-- [ ] Add resize to dataloader
-- [ ] Google Colab
 - [ ] WandB
+- [ ] Add resize to dataloader
+- [ ] pickelia
+- [ ] Discuss loss squeeze fiasco
 
 
 ## In Progress
 
 - [ ] Consider reviewing some of the [[Related Works]]
 - [ ] naive unet
+- [ ] Google Colab
+- [ ] [[loss value fiasco]]
 
 
 ## Stuck
@@ -38,6 +40,7 @@ kanban-plugin: basic
 - [x] Question 5
 - [x] Go over and run the existing files and model (vanilla.py)
 - [x] Watch Tutorial 12
+- [x] Fix Unet training
 - [x] Utilize JSON
 - [x] Question 9
 - [x] Conduct a mini literature review to see what's what

@@ -270,7 +270,9 @@ class ReconstructionTrainer(Trainer):
         #  - Calculate the loss
         # ====== YOUR CODE: ======
         reconstruction = self.model(X)
-        loss = self.loss_fn(reconstruction, y)
+        loss = self.loss_fn(reconstruction.squeeze(dim=1), y)
+        # import ipdb; ipdb.set_trace()
+        print("X train", torch.sum(X[0]), "reconstruction train", torch.sum(reconstruction[0]), "y train", torch.sum(y[0]))
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
@@ -296,7 +298,8 @@ class ReconstructionTrainer(Trainer):
             #  - Calculate number of correct predictions
             # ====== YOUR CODE: ======
             reconstruction = self.model(X)
-            batch_loss = self.loss_fn(reconstruction, y)
+            print("X test", torch.sum(X[0]), "reconstruction test", torch.sum(reconstruction[0]), "y test", torch.sum(y[0]))
+            batch_loss = self.loss_fn(reconstruction.squeeze(dim=1), y)
             # ========================
 
         return BatchResult(batch_loss)
