@@ -1,6 +1,7 @@
 import torch
 from models.subsampling import SubsamplingLayer
 from models.unet.unet_model import UNet
+from matplotlib.pyplot import figure, imshow, subplot, title, tight_layout
 
 class UNet_Rec(torch.nn.Module):
     def __init__(self,drop_rate, device, learn_mask):

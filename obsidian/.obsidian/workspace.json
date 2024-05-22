@@ -16,13 +16,7 @@
                 "file": "Kanban.md"
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "556b974cefa1bc65",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "27edc9ab901d9b5a",
             "type": "leaf",
@@ -36,7 +30,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"

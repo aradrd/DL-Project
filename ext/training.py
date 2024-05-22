@@ -143,7 +143,7 @@ class Trainer(abc.ABC):
         :param kw: Keyword args supported by _foreach_batch.
         :return: An EpochResult for the epoch.
         """
-        self.model.train(False)  # set evaluation (test) mode
+        self.model.train(True)  # set evaluation (test) mode
         return self._foreach_batch(dl_test, self.test_batch, **kw)
 
     @abc.abstractmethod
@@ -271,8 +271,6 @@ class ReconstructionTrainer(Trainer):
         # ====== YOUR CODE: ======
         reconstruction = self.model(X)
         loss = self.loss_fn(reconstruction.squeeze(dim=1), y)
-        # import ipdb; ipdb.set_trace()
-        print("X train", torch.sum(X[0]), "reconstruction train", torch.sum(reconstruction[0]), "y train", torch.sum(y[0]))
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
@@ -298,7 +296,6 @@ class ReconstructionTrainer(Trainer):
             #  - Calculate number of correct predictions
             # ====== YOUR CODE: ======
             reconstruction = self.model(X)
-            print("X test", torch.sum(X[0]), "reconstruction test", torch.sum(reconstruction[0]), "y test", torch.sum(y[0]))
             batch_loss = self.loss_fn(reconstruction.squeeze(dim=1), y)
             # ========================
 
